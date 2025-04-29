@@ -74,7 +74,7 @@
               </component>
             </children>
           </grid>
-          <component id="739bd" class="javax.swing.JTable" binding="table1" default-binding="true">
+          <component id="739bd" class="javax.swing.JTable" binding="tablaMascotas">
             <constraints>
               <grid row="1" column="0" row-span="2" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>

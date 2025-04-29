@@ -16,8 +16,16 @@ public class ControladoraPersistencia {
     }
 
     public List<Mascota> traerMascotas() {
-        List<Mascota> listita=new ArrayList<Mascota>();
-        ArrayList<Mascota>listaMascotas=new ArrayList<Mascota>(listita);
-        return listaMascotas;
+        return masc.listarTodos();
+    }
+
+    public void borrarMascotas(int numCliente) {
+        try {
+            masc.destroy(numCliente);
+            duen.destroy(numCliente);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

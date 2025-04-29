@@ -34,7 +34,11 @@ public class ControladoraLogica {
         controlPersis.guardar(duenio,masco);
     }
 
-    public List<Mascota> traerMasoctas() {
+    public List<Mascota> traerMascotas() {
         return controlPersis.traerMascotas();
+    }
+
+    public void borrarMascota(int numCliente) {
+        controlPersis.borrarMascotas(numCliente);
     }
 }
