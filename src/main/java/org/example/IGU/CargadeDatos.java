@@ -21,7 +21,7 @@ public class CargadeDatos extends JDialog {
     private JComboBox Alergioco;
     private JComboBox Atencion;
 
-    public CargadeDatos(Principal val) {
+    public CargadeDatos(CargadeDatos val) {
         super(val);
         setTitle("Carga de Datos");
         setContentPane(CargaDatos);

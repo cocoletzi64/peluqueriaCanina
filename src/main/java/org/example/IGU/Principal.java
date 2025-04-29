@@ -29,6 +29,12 @@ public class Principal extends JDialog{
             }
         });
 
+        verDatosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                VerDatos verDatos=new VerDatos(null);
+            }
+        });
         setVisible(true);
     }
     public static void main(String[] args) {

@@ -3,6 +3,7 @@ package org.example.logica;
 
 import org.example.percistencia.ControladoraPersistencia;
 
+import java.util.List;
 import java.util.Random;
 
 public class ControladoraLogica {
@@ -33,4 +34,7 @@ public class ControladoraLogica {
         controlPersis.guardar(duenio,masco);
     }
 
+    public List<Mascota> traerMasoctas() {
+        return controlPersis.traerMascotas();
+    }
 }
