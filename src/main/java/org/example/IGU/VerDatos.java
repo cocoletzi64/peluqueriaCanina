@@ -71,7 +71,7 @@ public class VerDatos extends JDialog {
                         ;
                     }
                     else {
-                        mostrarMensaje("No selecciono ninguna mascota","Error", "Error al eliminar");
+                        mostrarMensaje("No se selecciono ninguna mascota","Error", "Error al eliminar");
                         setVisible(true);
                     }
                 }
