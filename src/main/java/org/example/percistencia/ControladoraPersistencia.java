@@ -26,6 +26,9 @@ public class ControladoraPersistencia {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
 
+    public Mascota traerMascotas(int numCliente) {
+        return masc.find(numCliente);
     }
 }
