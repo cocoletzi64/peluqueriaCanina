@@ -31,4 +31,17 @@ public class ControladoraPersistencia {
     public Mascota traerMascotas(int numCliente) {
         return masc.find(numCliente);
     }
+
+    public void modificarMascota(Mascota masco) {
+        masc.edit(masco);
+
+    }
+
+    public Duenio traerduenio(int idDuenio) {
+        return duen.find(idDuenio);
+    }
+
+    public void modificarDuenio(Duenio duenio) {
+        duen.edit(duenio);
+    }
 }

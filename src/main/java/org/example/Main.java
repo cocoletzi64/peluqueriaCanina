@@ -8,5 +8,4 @@ public class Main {
         Principal principal=new Principal(null);
 
     }
-
     }

@@ -78,7 +78,6 @@ public class VerDatos extends JDialog {
                 }
                 else {
                     mostrarMensaje("No hay nada para eliminar en la tabla","Error","Error al eliminar");
-                    setVisible(true);
                 }
             }
         });
@@ -94,23 +93,23 @@ public class VerDatos extends JDialog {
 
                         int num_cliente =Integer.parseInt(String.valueOf(tablaMascotas.getValueAt(tablaMascotas.getSelectedRow(),0)));
                         ModificarDatos pantallaMod=new ModificarDatos(null,num_cliente);
-                        mostrarMensaje("Mascota editada correctamente","Info","Editado de mascota");
-                        setVisible(true);
+                        dispose();
                         ;
                     }
                     else {
                         mostrarMensaje("No se selecciono ninguna mascota para editar","Error", "Error al editar");
-                        setVisible(true);
+
                     }
                 }
                 else {
                     mostrarMensaje("No hay nada para editar en la tabla","Error","Error al editar");
-                    setVisible(true);
+
                 }
 
             }
         });
         setVisible(true);
+
     }
     //------------------------crear tabla
     public void mostrarMensaje(String mensaje, String tipo, String titulo){
@@ -125,8 +124,6 @@ public class VerDatos extends JDialog {
         }
 
     }
-
-
 
     private void cargarTabla() {
         // definir modelo de la tabla

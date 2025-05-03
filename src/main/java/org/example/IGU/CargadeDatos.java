@@ -41,7 +41,6 @@ public class CargadeDatos extends JDialog {
                 Atencion.setSelectedIndex(0);
             }
         });
-
         guardarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -60,6 +59,7 @@ public class CargadeDatos extends JDialog {
 
                 JOptionPane.showMessageDialog(null,"guardado con exito");
                 setVisible(true);
+                dispose();
 
             }
         });

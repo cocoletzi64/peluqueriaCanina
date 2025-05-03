@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 
 public class ModificarDatos extends JDialog{
     ControladoraLogica control=null;
+    Mascota masco;
     int num_cliente;
     private JTextField Nombre;
     private JTextField Raza;
@@ -52,11 +53,34 @@ public class ModificarDatos extends JDialog{
             }
         });
         cargarDatos(num_cliente);
+
+
+        guardarCambiosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                String nombremasco=Nombre.getText();
+                String raza=Raza.getText();
+                String color=Color.getText();
+                String nombreDue=NombreDue.getText();
+                String celDue=Cel_due.getText();
+                String obser=Observ.getText();
+                String alergico=(String)Alergico.getSelectedItem();
+                String atencion=(String)AtencionEsp.getSelectedItem();
+
+                control.modificarMascota(masco,nombremasco,raza,color,nombreDue,celDue,obser,alergico,atencion);
+                JOptionPane.showMessageDialog(null,"edicion realizada correctamente");
+                VerDatos pantalla=new VerDatos(null);
+                dispose();
+            }
+        });
         setVisible(true);
+
     }
 
+
     private void cargarDatos(int num_cliente) {
-        Mascota masco=control.traerMascota(num_cliente);
+        this.masco=control.traerMascota(num_cliente);
         Nombre.setText(masco.getNombre());
         Raza.setText(masco.getRaza());
         Color.setText(masco.getColor());
